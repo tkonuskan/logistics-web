@@ -1,38 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Logistics Web - Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            color: #555;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background: #2980b9;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hoş Geldin!</h1>
-    <p>Akıllı Filo Yönetimi sistemine giriş yapmak için aşağıdaki butona tıkla.</p>
-    <a href="/login/">Login Sayfasına Git</a>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Ana Sayfa{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">📦 Stok Durumu</h5>
+                <p class="card-text">Depodaki ürünlerin güncel envanter bilgisi.</p>
+                <a href="#" class="btn btn-outline-primary">Detayları Gör</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">🚚 Araç Takibi</h5>
+                <p class="card-text">Filo araçlarının konum ve sevkiyat bilgisi.</p>
+                <a href="#" class="btn btn-outline-success">Takip Et</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">📊 AI Analiz</h5>
+                <p class="card-text">Yapay zekâ destekli lojistik önerileri.</p>
+                <a href="#" class="btn btn-outline-warning">Rapor Al</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
