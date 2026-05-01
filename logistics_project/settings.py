@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 
-# Proje kök dizini
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Güvenlik ayarları
@@ -40,7 +39,7 @@ ROOT_URLCONF = 'logistics_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],  # login.html buradan yüklenir
+        'DIRS': [BASE_DIR / "templates"],  # home.html ve login.html buradan yüklenir
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,9 +71,9 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Dil ve zaman
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+# Dil ve zaman ayarı
+LANGUAGE_CODE = 'tr'
+TIME_ZONE = 'Europe/Istanbul'
 USE_I18N = True
 USE_TZ = True
 
